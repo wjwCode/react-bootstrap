@@ -30,8 +30,10 @@ export const State = {
 };
 
 export const Style = {
-  DEFAULT: 'default',
   PRIMARY: 'primary',
+  SECONDARY: 'secondary',
+  LIGHT: 'light',
+  DARK: 'dark',
   LINK: 'link',
   INVERSE: 'inverse',
 };
