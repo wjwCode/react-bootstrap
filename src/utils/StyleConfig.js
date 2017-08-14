@@ -16,6 +16,7 @@ export const SIZE_MAP = {
 };
 
 export const DEVICE_SIZES = [
+  'xl',
   'lg',
   'md',
   'sm',

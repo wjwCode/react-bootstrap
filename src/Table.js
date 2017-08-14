@@ -6,6 +6,7 @@ import { bsClass, getClassSet, prefix, splitBsProps }
   from './utils/bootstrapUtils';
 
 const propTypes = {
+  inverse: PropTypes.bool,
   striped: PropTypes.bool,
   bordered: PropTypes.bool,
   condensed: PropTypes.bool,
@@ -14,6 +15,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  inverse: false,
   bordered: false,
   condensed: false,
   hover: false,
@@ -24,6 +26,7 @@ const defaultProps = {
 class Table extends React.Component {
   render() {
     const {
+      inverse,
       striped,
       bordered,
       condensed,
@@ -37,28 +40,20 @@ class Table extends React.Component {
 
     const classes = {
       ...getClassSet(bsProps),
+      [prefix(bsProps, 'responsive')]: responsive,
+      [prefix(bsProps, 'inverse')]: inverse,
       [prefix(bsProps, 'striped')]: striped,
       [prefix(bsProps, 'bordered')]: bordered,
       [prefix(bsProps, 'condensed')]: condensed,
       [prefix(bsProps, 'hover')]: hover,
     };
 
-    const table = (
+    return (
       <table
         {...elementProps}
         className={classNames(className, classes)}
       />
     );
-
-    if (responsive) {
-      return (
-        <div className={prefix(bsProps, 'responsive')}>
-          {table}
-        </div>
-      );
-    }
-
-    return table;
   }
 }
 
