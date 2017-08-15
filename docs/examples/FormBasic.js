@@ -23,7 +23,7 @@ const FormExample = React.createClass({
           controlId="formBasicText"
           validationState={this.getValidationState()}
         >
-          <ControlLabel>Working example with validation</ControlLabel>
+          <FormLabel>Working example with validation</FormLabel>
           <FormControl
             type="text"
             value={this.state.value}

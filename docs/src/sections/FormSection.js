@@ -9,11 +9,11 @@ export default function FormSection() {
   return (
     <div className="bs-docs-section">
       <h1 className="page-header">
-        <Anchor id="forms">Forms</Anchor> <small>FormGroup, FormControl, ControlLabel</small>
+        <Anchor id="forms">Forms</Anchor> <small>FormGroup, FormControl, FormLabel</small>
       </h1>
 
       <p>
-        The <code>{'<FormControl>'}</code> component renders a form control with Bootstrap styling. The <code>{'<FormGroup>'}</code> component wraps a form control with proper spacing, along with support for a label, help text, and validation state. To ensure accessibility, set <code>controlId</code> on <code>{'<FormGroup>'}</code>, and use <code>{'<ControlLabel>'}</code> for the label.
+        The <code>{'<FormControl>'}</code> component renders a form control with Bootstrap styling. The <code>{'<FormGroup>'}</code> component wraps a form control with proper spacing, along with support for a label, help text, and validation state. To ensure accessibility, set <code>controlId</code> on <code>{'<FormGroup>'}</code>, and use <code>{'<FormLabel>'}</code> for the label.
       </p>
 
       <ReactPlayground codeText={Samples.FormBasic} />
@@ -33,8 +33,8 @@ export default function FormSection() {
       <h4><Anchor id="forms-props-form-control">FormControl</Anchor></h4>
       <PropTable component="FormControl" />
 
-      <h4><Anchor id="forms-props-control-label">ControlLabel</Anchor></h4>
-      <PropTable component="ControlLabel" />
+      <h4><Anchor id="forms-props-control-label">FormLabel</Anchor></h4>
+      <PropTable component="FormLabel" />
     </div>
   );
 }

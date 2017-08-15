@@ -1,18 +1,18 @@
 import React from 'react';
 import $ from 'teaspoon';
 
-import ControlLabel from '../src/ControlLabel';
+import FormLabel from '../src/FormLabel';
 import FormGroup from '../src/FormGroup';
 
 import { shouldWarn } from './helpers';
 
-describe('<ControlLabel>', () => {
+describe('<FormLabel>', () => {
   it('should render correctly', () => {
     expect(
       $(
-        <ControlLabel htmlFor="foo" className="my-control-label">
+        <FormLabel htmlFor="foo" className="my-control-label">
           Label
-        </ControlLabel>
+        </FormLabel>
       )
         .shallowRender()
         .single('label.control-label.my-control-label[htmlFor="foo"]')
@@ -22,9 +22,9 @@ describe('<ControlLabel>', () => {
 
   it('should respect srOnly', () => {
     $(
-      <ControlLabel srOnly>
+      <FormLabel srOnly>
         Label
-      </ControlLabel>
+      </FormLabel>
     )
       .shallowRender()
       .single('label.control-label.sr-only');
@@ -33,7 +33,7 @@ describe('<ControlLabel>', () => {
   it('should use controlId for htmlFor', () => {
     $(
       <FormGroup controlId="foo">
-        <ControlLabel>Label</ControlLabel>
+        <FormLabel>Label</FormLabel>
       </FormGroup>
     )
       .render()
@@ -45,9 +45,9 @@ describe('<ControlLabel>', () => {
 
     $(
       <FormGroup controlId="foo">
-        <ControlLabel htmlFor="bar">
+        <FormLabel htmlFor="bar">
           Label
-        </ControlLabel>
+        </FormLabel>
       </FormGroup>
     )
       .render()

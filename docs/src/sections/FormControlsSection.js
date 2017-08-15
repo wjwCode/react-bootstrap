@@ -24,7 +24,7 @@ export default function FormControlsSection() {
       <PropTable component="Radio" />
 
       <h4><Anchor id="forms-props-form-control-static">FormControl.Static</Anchor></h4>
-      <PropTable component="FormControlStatic" />
+      <PropTable component="FormControlPlaintext" />
 
       <h4><Anchor id="forms-props-help-block">HelpBlock</Anchor></h4>
       <PropTable component="HelpBlock" />

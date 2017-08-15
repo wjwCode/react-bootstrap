@@ -9,26 +9,24 @@ const propTypes = {
 };
 
 const defaultProps = {
-  componentClass: 'p',
+  componentClass: 'div',
 };
 
-class FormControlStatic extends React.Component {
+class InvalidFeedback extends React.Component {
   render() {
-    const { componentClass: Component, className, ...props } = this.props;
+    const { className, componentClass: Component, ...props } = this.props;
     const [bsProps, elementProps] = splitBsProps(props);
-
-    const classes = getClassSet(bsProps);
 
     return (
       <Component
         {...elementProps}
-        className={classNames(className, classes)}
+        className={classNames(className, getClassSet(bsProps))}
       />
     );
   }
 }
 
-FormControlStatic.propTypes = propTypes;
-FormControlStatic.defaultProps = defaultProps;
+InvalidFeedback.defaultProps = defaultProps;
+InvalidFeedback.propTypes = propTypes;
 
-export default bsClass('form-control-static', FormControlStatic);
+export default bsClass('invalid-feedback', InvalidFeedback);
